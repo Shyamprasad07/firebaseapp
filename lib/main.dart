@@ -31,6 +31,7 @@ class FirebaseTutorial extends StatefulWidget {
 }
 
 class _FirebaseTutorialState extends State<FirebaseTutorial> {
+  var name = '';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,6 +42,11 @@ class _FirebaseTutorialState extends State<FirebaseTutorial> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            //lest place it at the top
+            Text(
+              "My name is : $name",
+              style: TextStyle(fontSize: 28),
+            ),
             //crude operation
             //create button
             ElevatedButton(
@@ -62,13 +68,31 @@ class _FirebaseTutorialState extends State<FirebaseTutorial> {
                   });
                   //  it will add rcored of user
                   // Lets save it
-                  
+                  // record save successfully
                 },
                 child: const Text("Create")),
             //Read button
-            ElevatedButton(onPressed: () {}, child: const Text("Read")),
+            ElevatedButton(
+                onPressed: () {
+                  // To read data of name from user collection's my_doc documants
+                  // but first create a variable to store the value
+                  //Lets read the name Value from firestore and store it
+                  var firestore = FirebaseFirestore.instance.collection("users").doc('my_doc');
+                  firestore.get().then((value) {
+                    // after getting the doc set name = vlue['name]
+                    name = value.data()!['name'];
+                    setState(() {});
+                    // lets fetch data
+                  });
+                },
+                child: const Text("Read")),
             //Update button
-            ElevatedButton(onPressed: () {}, child: const Text("Update")),
+            ElevatedButton(onPressed: () {
+              var firestore = FirebaseFirestore.instance.collection("users").doc('my_doc');
+              firestore.update({
+                 'name': "shyam prasad",
+              });
+            }, child: const Text("Update")),
             //delete button
             ElevatedButton(onPressed: () {}, child: const Text("Delete")),
           ],

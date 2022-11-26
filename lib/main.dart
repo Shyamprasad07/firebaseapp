@@ -94,7 +94,10 @@ class _FirebaseTutorialState extends State<FirebaseTutorial> {
               });
             }, child: const Text("Update")),
             //delete button
-            ElevatedButton(onPressed: () {}, child: const Text("Delete")),
+            ElevatedButton(onPressed: () {
+              var firestore = FirebaseFirestore.instance.collection("users").doc('my_doc');
+              firestore.delete();
+            }, child: const Text("Delete")),
           ],
         ),
       ),

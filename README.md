@@ -14,3 +14,12 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+Use http latest package in pubspec.yaml
+for dummy api resoure
+https://dummyjson.com
+use this in project
+https://dummyjson.com/products
+
+formate api tool
+https://jsonformatter.org

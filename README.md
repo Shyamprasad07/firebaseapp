@@ -6,20 +6,9 @@ A new Flutter project.
 
 This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+# Fetch data from Rest API :
+![fetch data from Api](https://user-images.githubusercontent.com/116074737/204476286-83f73265-936b-4064-8e1e-00bf94ca26d9.jpeg)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
 
-Use http latest package in pubspec.yaml
-for dummy api resoure
-https://dummyjson.com
-use this in project
-https://dummyjson.com/products
-
-formate api tool
-https://jsonformatter.org
+![fech data from Api 2](https://user-images.githubusercontent.com/116074737/204476300-d9196d73-639e-407a-917d-af34e40a4a21.jpeg)
